@@ -1,0 +1,30 @@
+import static dependencies.DependenciesKt.*
+
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+android {
+  compileSdkVersion COMPILE_SDK
+
+  defaultConfig {
+    minSdkVersion MIN_SDK
+    versionCode 1
+    versionName "1.0"
+  }
+}
+
+dependencies {
+  api KOTLIN
+
+  api APPCOMPAT
+
+  api ACTIVITYX
+  api FRAGMENTX
+  api KTX
+
+  api VIEWMODEL
+  api LIVEDATA
+
+  api COROUTINE
+  api UI_COROUTINE
+}

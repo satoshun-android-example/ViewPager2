@@ -1,0 +1,28 @@
+import static dependencies.DependenciesKt.*
+
+buildscript {
+  repositories {
+    google()
+    jcenter()
+  }
+  dependencies {
+    classpath ANDROID_PLUGIN
+    classpath KOTLIN_PLUGIN
+    classpath VERSIONS_PLUGIN
+  }
+}
+
+allprojects {
+  repositories {
+    google()
+    jcenter()
+    // for camerax artifact
+    maven {
+      url "/Users/stsn/git/r8.googlesource.com/test/out/support/build/support_repo/"
+    }
+  }
+}
+
+task clean(type: Delete) {
+  delete rootProject.buildDir
+}
