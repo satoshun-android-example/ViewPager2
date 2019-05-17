@@ -11,6 +11,7 @@ class ViewPager2Activity : AppCompatActivity() {
 
     val viewPager: ViewPager2 = findViewById(R.id.viewpager)
     viewPager.adapter = FragmentStateAdapterExample(this)
+
 //    viewPager.adapter = ViewPagerAdapterExample()
 //    viewPager.adapter = GroupieAdapterExample()
   }
