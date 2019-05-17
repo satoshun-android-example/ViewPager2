@@ -38,5 +38,5 @@ internal class FragmentStateAdapterExample(
   activity: FragmentActivity
 ) : FragmentStateAdapter(activity) {
   override fun getItem(position: Int) = FragmentExample(position)
-  override fun getItemCount() = 5
+  override fun getItemCount() = 100
 }
