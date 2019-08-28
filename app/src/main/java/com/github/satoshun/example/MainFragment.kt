@@ -27,19 +27,6 @@ class MainFragment : Fragment() {
 
     val pageMarginPx = resources.getDimensionPixelOffset(R.dimen.pageMargin)
     val offsetPx = resources.getDimensionPixelOffset(R.dimen.offset)
-//    binding.viewpager.setPageTransformer { page, position ->
-//      val viewPager = page.parent.parent as ViewPager2
-//      val offset = position * -(2 * offsetPx + pageMarginPx)
-//      if (viewPager.orientation == ORIENTATION_HORIZONTAL) {
-//        if (ViewCompat.getLayoutDirection(viewPager) == ViewCompat.LAYOUT_DIRECTION_RTL) {
-//          page.translationX = -offset
-//        } else {
-//          page.translationX = offset
-//        }
-//      } else {
-//        page.translationY = offset
-//      }
-//    }
 
     binding.viewpager.setPageTransformer { page, position ->
       val offset = position * -(2 * offsetPx + pageMarginPx)
