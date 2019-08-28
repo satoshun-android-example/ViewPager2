@@ -42,7 +42,6 @@ internal class ViewPagerItem : BindableItem<ViewpagerItemBinding>() {
 
   override fun bind(binding: ViewpagerItemBinding, position: Int) = with(binding) {
     viewpager.offscreenPageLimit = 3
-    viewpager.orientation = ViewPager2.ORIENTATION_HORIZONTAL
 
     val pageMarginPx = root.context.resources.getDimensionPixelOffset(R.dimen.pageMargin)
     val offsetPx = root.context.resources.getDimensionPixelOffset(R.dimen.offset)

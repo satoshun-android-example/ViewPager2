@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewpager2.widget.ViewPager2
 import com.github.satoshun.example.databinding.Main2FragBinding
@@ -26,7 +27,8 @@ class MainFragment2 : Fragment() {
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
 
-    binding.recycler.layoutManager = LinearLayoutManager(context)
-    binding.recycler.adapter = ViewPagerAdapter()
+    val adapter = ViewPagerAdapter()
+    binding.recycler.adapter = adapter
+    binding.recycler.layoutManager = GridLayoutManager(context, adapter.spanCount)
   }
 }
