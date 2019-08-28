@@ -1,3 +1,7 @@
 <resources>
   <string name="app_name">ViewPager2</string>
+
+  <dimen name="pageMargin">20dp</dimen>
+  <dimen name="offset">30dp</dimen>
+  <dimen name="pageMarginAndOffset">50dp</dimen>
 </resources>

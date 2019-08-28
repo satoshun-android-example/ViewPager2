@@ -37,4 +37,10 @@ dependencies {
   implementation MATERIAL
   implementation APPCOMPAT
   implementation CONSTRAINTLAYOUT
+
+  implementation NAVIGATION
+  implementation NAVIGATION_UI
+
+  implementation ACTIVITYX
+  implementation FRAGMENTX
 }
