@@ -3,8 +3,8 @@ package com.github.satoshun.example
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.item_page.view.*
 
 internal class ViewPagerAdapterExample : RecyclerView.Adapter<ViewHolderExample>() {
   private val colors = intArrayOf(
@@ -30,8 +30,8 @@ internal class ViewPagerAdapterExample : RecyclerView.Adapter<ViewHolderExample>
     position: Int
   ) {
     with(holder.itemView) {
-      title.text = "item $position"
-      container.setBackgroundResource(colors[position])
+      findViewById<TextView>(R.id.title).text = "item $position"
+      findViewById<View>(R.id.container).setBackgroundResource(colors[position])
     }
   }
 }
