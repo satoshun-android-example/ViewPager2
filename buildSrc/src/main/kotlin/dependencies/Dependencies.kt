@@ -68,8 +68,8 @@ const val RXWEBVIEW = "com.github.satoshun.RxWebView:rxwebview-kotlin:2.3.0"
 const val RXJAVA = "io.reactivex.rxjava2:rxjava:2.2.0"
 const val RXANDROID = "io.reactivex.rxjava2:rxandroid:2.1.0"
 
-const val GROUPIE = "com.xwray:groupie:2.3.0"
-const val GROUPIE_DATABINDING = "com.xwray:groupie-databinding:2.3.0"
+const val GROUPIE = "com.xwray:groupie:2.5.1"
+const val GROUPIE_DATABINDING = "com.xwray:groupie-databinding:2.5.1"
 
 const val WORK_MANAGER = "androidx.work:work-runtime-ktx:2.0.0-rc01"
 
