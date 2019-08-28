@@ -22,7 +22,7 @@ const val ACTIVITYX = "androidx.activity:activity-ktx:1.1.0-alpha02"
 const val FRAGMENTX = "androidx.fragment:fragment-ktx:1.2.0-alpha02"
 
 const val APPCOMPAT = "androidx.appcompat:appcompat:1.1.0-alpha02"
-const val RECYCLERVIEW = "androidx.recyclerview:recyclerview:1.1.0-alpha02"
+const val RECYCLERVIEW = "androidx.recyclerview:recyclerview:1.0.0"
 const val CONSTRAINTLAYOUT = "androidx.constraintlayout:constraintlayout:2.0.0-beta2"
 const val CARDVIEW = "androidx.cardview:cardview:1.0.0"
 

@@ -28,7 +28,10 @@ class MainFragment2 : Fragment() {
     super.onViewCreated(view, savedInstanceState)
 
     val adapter = ViewPagerAdapter()
+    adapter.spanCount = 2
     binding.recycler.adapter = adapter
-    binding.recycler.layoutManager = GridLayoutManager(context, adapter.spanCount)
+    binding.recycler.layoutManager = GridLayoutManager(context, adapter.spanCount).apply {
+      spanSizeLookup = adapter.spanSizeLookup
+    }
   }
 }
