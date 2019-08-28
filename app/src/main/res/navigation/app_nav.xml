@@ -2,9 +2,13 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
   android:id="@+id/app_nav"
-  app:startDestination="@id/nav_main">
+  app:startDestination="@id/nav_main2">
 
   <fragment
     android:id="@+id/nav_main"
     android:name="com.github.satoshun.example.MainFragment" />
+
+  <fragment
+    android:id="@+id/nav_main2"
+    android:name="com.github.satoshun.example.MainFragment2" />
 </navigation>
