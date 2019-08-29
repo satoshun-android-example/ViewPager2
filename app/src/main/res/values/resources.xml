@@ -1,11 +1,11 @@
 <resources>
   <string name="app_name">ViewPager2</string>
 
-  <dimen name="pageMargin">16dp</dimen>
+  <dimen name="page_margin">16dp</dimen>
   <dimen name="offset">32dp</dimen>
-  <dimen name="pageMarginAndOffset">48dp</dimen>
+  <dimen name="page_margin_and_offset">48dp</dimen>
 
-  <dimen name="pageMargin2">4dp</dimen>
+  <dimen name="page_margin2">4dp</dimen>
   <dimen name="offset2">64dp</dimen>
-  <dimen name="pageMarginAndOffset2">68dp</dimen>
+  <dimen name="page_margin_and_offset2">68dp</dimen>
 </resources>

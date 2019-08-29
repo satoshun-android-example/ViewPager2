@@ -46,7 +46,7 @@ internal class ViewPagerItem : BindableItem<ViewpagerItemBinding>() {
   override fun bind(binding: ViewpagerItemBinding, position: Int) = with(binding) {
     viewpager.offscreenPageLimit = 2
 
-    val pageMarginPx = root.context.resources.getDimensionPixelOffset(R.dimen.pageMargin)
+    val pageMarginPx = root.context.resources.getDimensionPixelOffset(R.dimen.page_margin)
     val offsetPx = root.context.resources.getDimensionPixelOffset(R.dimen.offset)
     viewpager.setPageTransformer(CompositePageTransformer().apply {
       addTransformer { page, position ->
@@ -64,7 +64,7 @@ internal class ViewPagerScaleItem : BindableItem<ViewpagerScaleItemBinding>() {
   override fun bind(binding: ViewpagerScaleItemBinding, position: Int) = with(binding) {
     viewpager.offscreenPageLimit = 2
 
-    val pageMarginPx = root.context.resources.getDimensionPixelOffset(R.dimen.pageMargin2)
+    val pageMarginPx = root.context.resources.getDimensionPixelOffset(R.dimen.page_margin2)
     val offsetPx = root.context.resources.getDimensionPixelOffset(R.dimen.offset2)
     viewpager.setPageTransformer(CompositePageTransformer().apply {
       addTransformer { page, position ->

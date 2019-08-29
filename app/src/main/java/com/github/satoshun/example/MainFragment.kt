@@ -28,7 +28,7 @@ class MainFragment : Fragment() {
     binding.viewpager.offscreenPageLimit = 3
     binding.viewpager.orientation = ViewPager2.ORIENTATION_HORIZONTAL
 
-    val pageMarginPx = resources.getDimensionPixelOffset(R.dimen.pageMargin)
+    val pageMarginPx = resources.getDimensionPixelOffset(R.dimen.page_margin)
     val offsetPx = resources.getDimensionPixelOffset(R.dimen.offset)
     binding.viewpager.setPageTransformer { page, position ->
       val offset = position * (2 * offsetPx + pageMarginPx)

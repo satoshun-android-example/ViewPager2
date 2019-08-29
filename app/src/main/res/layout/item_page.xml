@@ -4,8 +4,8 @@
   android:id="@+id/container"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  android:layout_marginLeft="@dimen/pageMarginAndOffset"
-  android:layout_marginRight="@dimen/pageMarginAndOffset"
+  android:layout_marginLeft="@dimen/page_margin_and_offset"
+  android:layout_marginRight="@dimen/page_margin_and_offset"
   app:cardCornerRadius="16dp">
 
   <androidx.constraintlayout.widget.ConstraintLayout
