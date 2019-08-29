@@ -48,12 +48,10 @@ internal class ViewPagerItem : BindableItem<ViewpagerItemBinding>() {
 
     val pageMarginPx = root.context.resources.getDimensionPixelOffset(R.dimen.page_margin)
     val offsetPx = root.context.resources.getDimensionPixelOffset(R.dimen.offset)
-    viewpager.setPageTransformer(CompositePageTransformer().apply {
-      addTransformer { page, position ->
-        val offset = position * (2 * offsetPx + pageMarginPx)
-        page.translationX = -offset
-      }
-    })
+    viewpager.setPageTransformer { page, position ->
+      val offset = position * (2 * offsetPx + pageMarginPx)
+      page.translationX = -offset
+    }
     viewpager.adapter = GroupieAdapterExample()
   }
 }
