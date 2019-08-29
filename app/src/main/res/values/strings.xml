@@ -4,4 +4,8 @@
   <dimen name="pageMargin">16dp</dimen>
   <dimen name="offset">32dp</dimen>
   <dimen name="pageMarginAndOffset">48dp</dimen>
+
+  <dimen name="pageMargin2">16dp</dimen>
+  <dimen name="offset2">64dp</dimen>
+  <dimen name="pageMarginAndOffset2">80dp</dimen>
 </resources>

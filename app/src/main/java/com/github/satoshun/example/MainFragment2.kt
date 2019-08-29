@@ -5,12 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.viewpager2.widget.ViewPager2
 import com.github.satoshun.example.databinding.Main2FragBinding
-import com.google.android.material.tabs.TabLayout
-import com.google.android.material.tabs.TabLayoutMediator
 
 class MainFragment2 : Fragment() {
   private lateinit var binding: Main2FragBinding
@@ -28,10 +24,7 @@ class MainFragment2 : Fragment() {
     super.onViewCreated(view, savedInstanceState)
 
     val adapter = ViewPagerAdapter()
-    adapter.spanCount = 2
     binding.recycler.adapter = adapter
-    binding.recycler.layoutManager = GridLayoutManager(context, adapter.spanCount).apply {
-      spanSizeLookup = adapter.spanSizeLookup
-    }
+    binding.recycler.layoutManager = LinearLayoutManager(context)
   }
 }
