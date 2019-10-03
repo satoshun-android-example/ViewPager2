@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.github.satoshun.example.databinding.Main2FragBinding
 
@@ -25,6 +26,7 @@ class MainFragment2 : Fragment() {
 
     val adapter = ViewPagerAdapter()
     binding.recycler.adapter = adapter
-    binding.recycler.layoutManager = LinearLayoutManager(context)
+//    binding.recycler.layoutManager = LinearLayoutManager(context)
+    binding.recycler.layoutManager = GridLayoutManager(context, 1)
   }
 }
