@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.viewpager2.widget.ViewPager2
 import com.github.satoshun.example.databinding.MainFragBinding
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
@@ -26,7 +25,6 @@ class MainFragment : Fragment() {
     super.onViewCreated(view, savedInstanceState)
 
     binding.viewpager.offscreenPageLimit = 3
-    binding.viewpager.orientation = ViewPager2.ORIENTATION_HORIZONTAL
 
     val pageMarginPx = resources.getDimensionPixelOffset(R.dimen.page_margin)
     val offsetPx = resources.getDimensionPixelOffset(R.dimen.offset)

@@ -21,6 +21,7 @@
       android:layout_height="0dp"
       android:clipChildren="false"
       android:clipToPadding="false"
+      android:orientation="horizontal"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintTop_toBottomOf="@id/tab" />
   </androidx.constraintlayout.widget.ConstraintLayout>
