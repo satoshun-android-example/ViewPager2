@@ -29,19 +29,21 @@ android {
 dependencies {
   implementation project(':common')
 
-  implementation VIEWPAGER2
-  implementation GROUPIE
-  implementation GROUPIE_DATABINDING
-
   implementation KOTLIN
 
   implementation MATERIAL
   implementation APPCOMPAT
   implementation CONSTRAINTLAYOUT
 
+  implementation ACTIVITYX
+  implementation FRAGMENTX
+
+  implementation RECYCLERVIEW
+  implementation VIEWPAGER2
+
   implementation NAVIGATION
   implementation NAVIGATION_UI
 
-  implementation ACTIVITYX
-  implementation FRAGMENTX
+  implementation GROUPIE
+  implementation GROUPIE_DATABINDING
 }

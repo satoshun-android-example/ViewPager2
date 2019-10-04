@@ -5,12 +5,12 @@ import androidx.viewpager2.widget.CompositePageTransformer
 import com.github.satoshun.example.databinding.ViewpagerItemBinding
 import com.github.satoshun.example.databinding.ViewpagerScaleItemBinding
 import com.xwray.groupie.GroupAdapter
+import com.xwray.groupie.GroupieViewHolder
 import com.xwray.groupie.Item
-import com.xwray.groupie.ViewHolder
 import com.xwray.groupie.databinding.BindableItem
 import kotlin.math.abs
 
-internal class GroupieAdapterExample : GroupAdapter<ViewHolder>() {
+internal class GroupieAdapterExample : GroupAdapter<GroupieViewHolder>() {
   init {
     addAll(
       listOf(
@@ -24,16 +24,16 @@ internal class GroupieAdapterExample : GroupAdapter<ViewHolder>() {
   }
 }
 
-internal class SampleItem(private val colorId: Int) : Item<ViewHolder>() {
+internal class SampleItem(private val colorId: Int) : Item<GroupieViewHolder>() {
   override fun getLayout(): Int = R.layout.item_page
 
-  override fun bind(viewHolder: ViewHolder, position: Int) {
+  override fun bind(viewHolder: GroupieViewHolder, position: Int) {
     viewHolder.itemView.findViewById<TextView>(R.id.title).text = colorId.toString()
     viewHolder.itemView.setBackgroundResource(colorId)
   }
 }
 
-internal class ViewPagerAdapter : GroupAdapter<ViewHolder>() {
+internal class ViewPagerAdapter : GroupAdapter<GroupieViewHolder>() {
   init {
     add(ViewPagerItem())
     add(ViewPagerScaleItem())
@@ -81,7 +81,7 @@ internal class ViewPagerScaleItem : BindableItem<ViewpagerScaleItemBinding>() {
   }
 }
 
-internal class GroupieAdapterExample2 : GroupAdapter<ViewHolder>() {
+internal class GroupieAdapterExample2 : GroupAdapter<GroupieViewHolder>() {
   init {
     addAll(
       listOf(
@@ -95,10 +95,10 @@ internal class GroupieAdapterExample2 : GroupAdapter<ViewHolder>() {
   }
 }
 
-internal class SampleItem2(private val colorId: Int) : Item<ViewHolder>() {
+internal class SampleItem2(private val colorId: Int) : Item<GroupieViewHolder>() {
   override fun getLayout(): Int = R.layout.item_page2
 
-  override fun bind(viewHolder: ViewHolder, position: Int) {
+  override fun bind(viewHolder: GroupieViewHolder, position: Int) {
     viewHolder.itemView.findViewById<TextView>(R.id.title).text = colorId.toString()
     viewHolder.itemView.setBackgroundResource(colorId)
   }
