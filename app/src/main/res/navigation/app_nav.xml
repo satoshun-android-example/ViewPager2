@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
   android:id="@+id/app_nav"
-  app:startDestination="@id/nav_main2">
+  app:startDestination="@id/nav_infinite">
 
   <fragment
     android:id="@+id/nav_main"
@@ -11,4 +11,8 @@
   <fragment
     android:id="@+id/nav_main2"
     android:name="com.github.satoshun.example.MainFragment2" />
+
+  <fragment
+    android:id="@+id/nav_infinite"
+    android:name="com.github.satoshun.example.infinite.InfiniteFragment" />
 </navigation>
