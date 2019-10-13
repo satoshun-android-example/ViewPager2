@@ -38,5 +38,5 @@ class InfiniteFragment : Fragment() {
 
 // alphabet a-c
 private val mockAdapterData = (0..2).map {
-  InfiniteData(title = ('a' + it).toString())
+  Data(title = ('a' + it).toString())
 }

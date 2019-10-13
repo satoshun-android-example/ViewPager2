@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.github.satoshun.example.databinding.InfiniteItemBinding
 
 class InfiniteAdapter(
-  private val itemData: List<InfiniteData>
+  private val itemData: List<Data>
 ) : RecyclerView.Adapter<InfiniteViewHolder>() {
 
   override fun getItemCount(): Int = Int.MAX_VALUE
@@ -26,7 +26,7 @@ class InfiniteAdapter(
   }
 }
 
-data class InfiniteData(
+data class Data(
   val title: String
 )
 
