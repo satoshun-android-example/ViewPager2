@@ -29,10 +29,14 @@ class InfiniteFragment : Fragment() {
     with(binding.viewpager) {
       val infiniteAdapter = InfiniteAdapter(data = mockAdapterData)
       adapter = infiniteAdapter
+      val center = Int.MAX_VALUE / 2
+      val start = center - (center % mockAdapterData.size)
+      setCurrentItem(start, false)
     }
   }
 }
 
-private val mockAdapterData = (0..26).map {
+// alphabet a-z
+private val mockAdapterData = (0..25).map {
   InfiniteData(title = ('a' + it).toString())
 }
