@@ -27,7 +27,7 @@ class InfiniteFragment : Fragment() {
     super.onViewCreated(view, savedInstanceState)
 
     with(binding.viewpager) {
-      val infiniteAdapter = InfiniteAdapter(data = mockAdapterData)
+      val infiniteAdapter = InfiniteAdapter(itemData = mockAdapterData)
       adapter = infiniteAdapter
       val center = Int.MAX_VALUE / 2
       val start = center - (center % mockAdapterData.size)
