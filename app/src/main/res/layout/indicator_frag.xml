@@ -10,6 +10,7 @@
       android:id="@+id/viewpager"
       android:layout_width="match_parent"
       android:layout_height="0dp"
+      android:layout_marginBottom="16dp"
       android:clipChildren="false"
       android:clipToPadding="false"
       android:orientation="horizontal"
@@ -19,10 +20,13 @@
     <com.google.android.material.tabs.TabLayout
       android:id="@+id/tab"
       android:layout_width="match_parent"
-      android:layout_height="50dp"
+      android:layout_height="8dp"
+      android:layout_marginBottom="24dp"
       app:layout_constraintBottom_toBottomOf="parent"
       app:tabBackground="@drawable/tab_selector"
       app:tabGravity="center"
-      app:tabIndicatorHeight="30dp" />
+      app:tabIndicator="@null"
+      app:tabPaddingEnd="6dp"
+      app:tabPaddingStart="6dp" />
   </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

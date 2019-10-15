@@ -37,7 +37,6 @@ class IndicatorFragment : Fragment() {
       binding.tab,
       binding.viewpager,
       TabLayoutMediator.OnConfigureTabCallback { tab, position ->
-        // TODO
       })
     mediator.attach()
   }
