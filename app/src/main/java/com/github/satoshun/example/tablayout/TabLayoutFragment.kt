@@ -1,23 +1,25 @@
-package com.github.satoshun.example
+package com.github.satoshun.example.tablayout
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.github.satoshun.example.databinding.MainFragBinding
+import com.github.satoshun.example.GroupieAdapterExample
+import com.github.satoshun.example.R
+import com.github.satoshun.example.databinding.TabLayoutFragBinding
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
-class MainFragment : Fragment() {
-  private lateinit var binding: MainFragBinding
+class TabLayoutFragment : Fragment() {
+  private lateinit var binding: TabLayoutFragBinding
 
   override fun onCreateView(
     inflater: LayoutInflater,
     container: ViewGroup?,
     savedInstanceState: Bundle?
   ): View? {
-    binding = MainFragBinding.inflate(inflater, container, false)
+    binding = TabLayoutFragBinding.inflate(inflater, container, false)
     return binding.root
   }
 

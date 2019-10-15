@@ -10,7 +10,7 @@ import com.xwray.groupie.Item
 import com.xwray.groupie.databinding.BindableItem
 import kotlin.math.abs
 
-internal class GroupieAdapterExample : GroupAdapter<GroupieViewHolder>() {
+class GroupieAdapterExample : GroupAdapter<GroupieViewHolder>() {
   init {
     addAll(
       listOf(
@@ -24,7 +24,7 @@ internal class GroupieAdapterExample : GroupAdapter<GroupieViewHolder>() {
   }
 }
 
-internal class SampleItem(private val colorId: Int) : Item<GroupieViewHolder>() {
+class SampleItem(private val colorId: Int) : Item<GroupieViewHolder>() {
   override fun getLayout(): Int = R.layout.item_page
 
   override fun bind(viewHolder: GroupieViewHolder, position: Int) {
@@ -33,14 +33,14 @@ internal class SampleItem(private val colorId: Int) : Item<GroupieViewHolder>() 
   }
 }
 
-internal class ViewPagerAdapter : GroupAdapter<GroupieViewHolder>() {
+class ViewPagerAdapter : GroupAdapter<GroupieViewHolder>() {
   init {
     add(ViewPagerItem())
     add(ViewPagerScaleItem())
   }
 }
 
-internal class ViewPagerItem : BindableItem<ViewpagerItemBinding>() {
+class ViewPagerItem : BindableItem<ViewpagerItemBinding>() {
   override fun getLayout(): Int = R.layout.viewpager_item
 
   override fun bind(binding: ViewpagerItemBinding, position: Int) = with(binding) {
@@ -56,7 +56,7 @@ internal class ViewPagerItem : BindableItem<ViewpagerItemBinding>() {
   }
 }
 
-internal class ViewPagerScaleItem : BindableItem<ViewpagerScaleItemBinding>() {
+class ViewPagerScaleItem : BindableItem<ViewpagerScaleItemBinding>() {
   override fun getLayout(): Int = R.layout.viewpager_scale_item
 
   override fun bind(binding: ViewpagerScaleItemBinding, position: Int) = with(binding) {
@@ -81,7 +81,7 @@ internal class ViewPagerScaleItem : BindableItem<ViewpagerScaleItemBinding>() {
   }
 }
 
-internal class GroupieAdapterExample2 : GroupAdapter<GroupieViewHolder>() {
+class GroupieAdapterExample2 : GroupAdapter<GroupieViewHolder>() {
   init {
     addAll(
       listOf(
@@ -95,7 +95,7 @@ internal class GroupieAdapterExample2 : GroupAdapter<GroupieViewHolder>() {
   }
 }
 
-internal class SampleItem2(private val colorId: Int) : Item<GroupieViewHolder>() {
+class SampleItem2(private val colorId: Int) : Item<GroupieViewHolder>() {
   override fun getLayout(): Int = R.layout.item_page2
 
   override fun bind(viewHolder: GroupieViewHolder, position: Int) {

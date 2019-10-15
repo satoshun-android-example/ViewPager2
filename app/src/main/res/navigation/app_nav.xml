@@ -2,11 +2,11 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
   android:id="@+id/app_nav"
-  app:startDestination="@id/nav_infinite">
+  app:startDestination="@id/nav_indicator">
 
   <fragment
     android:id="@+id/nav_main"
-    android:name="com.github.satoshun.example.MainFragment" />
+    android:name="com.github.satoshun.example.tablayout.TabLayoutFragment" />
 
   <fragment
     android:id="@+id/nav_main2"
@@ -15,4 +15,8 @@
   <fragment
     android:id="@+id/nav_infinite"
     android:name="com.github.satoshun.example.infinite.InfiniteFragment" />
+
+  <fragment
+    android:id="@+id/nav_indicator"
+    android:name="com.github.satoshun.example.indicator.IndicatorFragment" />
 </navigation>
