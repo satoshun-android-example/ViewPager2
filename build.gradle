@@ -16,9 +16,11 @@ allprojects {
   repositories {
     google()
     jcenter()
-    // for camerax artifact
-    maven {
-      url "/Users/stsn/git/r8.googlesource.com/test/out/support/build/support_repo/"
+  }
+
+  tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
+    kotlinOptions {
+      jvmTarget = JavaVersion.VERSION_1_8
     }
   }
 }

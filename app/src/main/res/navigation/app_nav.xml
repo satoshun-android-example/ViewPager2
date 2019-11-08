@@ -20,7 +20,7 @@
     android:id="@+id/nav_indicator"
     android:name="com.github.satoshun.example.indicator.IndicatorFragment" />
 
-  <fragment
+  <activity
     android:id="@+id/nav_child"
-    android:name="com.github.satoshun.example.child.ChildFragment" />
+    android:name="com.github.satoshun.example.child.ChildActivity" />
 </navigation>
