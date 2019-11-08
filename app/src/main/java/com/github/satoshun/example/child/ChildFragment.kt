@@ -5,7 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.view.get
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.github.satoshun.example.databinding.ChildFragBinding
 
@@ -28,6 +30,9 @@ class ChildFragment : Fragment() {
     val adapter = ChildAdapter(this)
     binding.viewPager.adapter = adapter
 
+    val childView = binding.viewPager[0] as RecyclerView
+    childView.setItemViewCacheSize(5)
+
     binding.bottom.setOnClickListener {
       binding.viewPager.setCurrentItem((binding.viewPager.currentItem + 1) % 5, false)
     }
@@ -49,31 +54,51 @@ class ChildAdapter(fragment: Fragment) : FragmentStateAdapter(fragment) {
 }
 
 class Child1Fragment : Fragment() {
-  override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+  override fun onCreateView(
+    inflater: LayoutInflater,
+    container: ViewGroup?,
+    savedInstanceState: Bundle?
+  ): View? {
     return TextView(requireContext()).apply { text = "Child1Fragment" }
   }
 }
 
 class Child2Fragment : Fragment() {
-  override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+  override fun onCreateView(
+    inflater: LayoutInflater,
+    container: ViewGroup?,
+    savedInstanceState: Bundle?
+  ): View? {
     return TextView(requireContext()).apply { text = "Child2Fragment" }
   }
 }
 
 class Child3Fragment : Fragment() {
-  override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+  override fun onCreateView(
+    inflater: LayoutInflater,
+    container: ViewGroup?,
+    savedInstanceState: Bundle?
+  ): View? {
     return TextView(requireContext()).apply { text = "Child3Fragment" }
   }
 }
 
 class Child4Fragment : Fragment() {
-  override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+  override fun onCreateView(
+    inflater: LayoutInflater,
+    container: ViewGroup?,
+    savedInstanceState: Bundle?
+  ): View? {
     return TextView(requireContext()).apply { text = "Child4Fragment" }
   }
 }
 
 class Child5Fragment : Fragment() {
-  override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+  override fun onCreateView(
+    inflater: LayoutInflater,
+    container: ViewGroup?,
+    savedInstanceState: Bundle?
+  ): View? {
     return TextView(requireContext()).apply { text = "Child5Fragment" }
   }
 }

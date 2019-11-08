@@ -22,7 +22,7 @@ const val ACTIVITYX = "androidx.activity:activity-ktx:1.1.0-beta01"
 const val FRAGMENTX = "androidx.fragment:fragment-ktx:1.2.0-beta01"
 
 const val APPCOMPAT = "androidx.appcompat:appcompat:1.1.0"
-const val RECYCLERVIEW = "androidx.recyclerview:recyclerview:1.1.0-beta05"
+const val RECYCLERVIEW = "androidx.recyclerview:recyclerview:1.1.0-rc01"
 const val CONSTRAINTLAYOUT = "androidx.constraintlayout:constraintlayout:2.0.0-beta2"
 const val CARDVIEW = "androidx.cardview:cardview:1.0.0"
 
@@ -30,7 +30,7 @@ const val CONTENTPAGER = "androidx.contentpager:contentpager:1.0.0-rc01"
 const val WEBKIT = "androidx.webkit:webkit:1.0.0"
 const val MEDIA2 = "androidx.media2:media2:1.0.0-alpha04"
 
-const val MATERIAL = "com.google.android.material:material:1.1.0-alpha09"
+const val MATERIAL = "com.google.android.material:material:1.1.0-beta02"
 const val PAGING = "androidx.paging:paging-runtime:2.1.0"
 const val BROWSER = "androidx.browser:browser:1.0.0"
 const val NAVIGATION = "androidx.navigation:navigation-fragment-ktx:$VNAVIGATION"
@@ -68,8 +68,8 @@ const val RXWEBVIEW = "com.github.satoshun.RxWebView:rxwebview-kotlin:2.3.0"
 const val RXJAVA = "io.reactivex.rxjava2:rxjava:2.2.0"
 const val RXANDROID = "io.reactivex.rxjava2:rxandroid:2.1.0"
 
-const val GROUPIE = "com.xwray:groupie:2.6.0"
-const val GROUPIE_DATABINDING = "com.xwray:groupie-databinding:2.6.0"
+const val GROUPIE = "com.xwray:groupie:2.7.0"
+const val GROUPIE_DATABINDING = "com.xwray:groupie-databinding:2.7.0"
 
 const val WORK_MANAGER = "androidx.work:work-runtime-ktx:2.0.0-rc01"
 
@@ -80,8 +80,8 @@ const val CAMERAX_EXTENSIONS_STUB = "androidx.camera:camera-extensions-stub:1.0.
 
 const val ANDROID_ANNOTATION = "androidx.annotation:annotation:1.0.0"
 
-const val JUNIT = "junit:junit:4.13-beta-1"
-const val TRUTH = "com.google.truth:truth:0.42"
+const val JUNIT = "junit:junit:4.12"
+const val TRUTH = "com.google.truth:truth:1.0"
 const val MOCKITO_KOTLIN = "com.nhaarman:mockito-kotlin-kt1.1:1.5.0"
 const val TEST_RUNNER = "androidx.test:runner:1.1.1"
 const val TEST_RULE = "androidx.test:rules:1.1.0"
