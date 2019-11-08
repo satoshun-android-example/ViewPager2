@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
   android:id="@+id/app_nav"
-  app:startDestination="@id/nav_indicator">
+  app:startDestination="@id/nav_child">
 
   <fragment
     android:id="@+id/nav_main"
@@ -19,4 +19,8 @@
   <fragment
     android:id="@+id/nav_indicator"
     android:name="com.github.satoshun.example.indicator.IndicatorFragment" />
+
+  <fragment
+    android:id="@+id/nav_child"
+    android:name="com.github.satoshun.example.child.ChildFragment" />
 </navigation>
