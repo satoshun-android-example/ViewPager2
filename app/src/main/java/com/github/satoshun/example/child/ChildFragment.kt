@@ -29,19 +29,21 @@ class ChildFragment : Fragment() {
     binding.viewPager.adapter = adapter
 
     binding.bottom.setOnClickListener {
-      binding.viewPager.setCurrentItem((binding.viewPager.currentItem + 1) % 3, false)
+      binding.viewPager.setCurrentItem((binding.viewPager.currentItem + 1) % 5, false)
     }
   }
 }
 
 class ChildAdapter(fragment: Fragment) : FragmentStateAdapter(fragment) {
-  override fun getItemCount(): Int = 3
+  override fun getItemCount(): Int = 5
 
   override fun createFragment(position: Int): Fragment {
-    return when (position % 3) {
+    return when (position % 5) {
       0 -> Child1Fragment()
       1 -> Child2Fragment()
-      else -> Child3Fragment()
+      2 -> Child3Fragment()
+      3 -> Child4Fragment()
+      else -> Child5Fragment()
     }
   }
 }
@@ -61,5 +63,17 @@ class Child2Fragment : Fragment() {
 class Child3Fragment : Fragment() {
   override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
     return TextView(requireContext()).apply { text = "Child3Fragment" }
+  }
+}
+
+class Child4Fragment : Fragment() {
+  override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    return TextView(requireContext()).apply { text = "Child4Fragment" }
+  }
+}
+
+class Child5Fragment : Fragment() {
+  override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    return TextView(requireContext()).apply { text = "Child5Fragment" }
   }
 }
