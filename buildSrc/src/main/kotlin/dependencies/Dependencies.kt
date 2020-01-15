@@ -4,10 +4,10 @@ const val COMPILE_SDK = 29
 const val MIN_SDK = 25
 const val TARGET_SDK = 29
 
-private const val VKOTLIN = "1.3.50"
+private const val VKOTLIN = "1.3.61"
 private const val VNAVIGATION = "2.1.0"
 
-const val ANDROID_PLUGIN = "com.android.tools.build:gradle:3.5.2"
+const val ANDROID_PLUGIN = "com.android.tools.build:gradle:3.5.3"
 const val KOTLIN_PLUGIN = "org.jetbrains.kotlin:kotlin-gradle-plugin:$VKOTLIN"
 const val SAFEARGS_PLUGIN = "androidx.navigation:navigation-safe-args-gradle-plugin:$VNAVIGATION"
 const val VERSIONS_PLUGIN = "com.github.ben-manes:gradle-versions-plugin:0.20.0"
@@ -55,7 +55,7 @@ const val EMOJI_BUNDLED = "androidx.emoji:emoji-bundled:1.0.0"
 const val SAVEDSTATE = "androidx.savedstate:savedstate:1.0.0-alpha02"
 const val SAVEDSTATE_VIEWMODEL = "androidx.lifecycle:lifecycle-viewmodel-savedstate:1.0.0-alpha01"
 
-const val VIEWPAGER2 = "androidx.viewpager2:viewpager2:1.0.0-rc02"
+const val VIEWPAGER2 = "androidx.viewpager2:viewpager2:1.0.0"
 
 const val RECOMMENDATION = "androidx.recommendation:recommendation:1.0.0"
 
