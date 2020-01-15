@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentStatePagerAdapter
+import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.github.satoshun.example.GroupieAdapterExample2
 import com.github.satoshun.example.R
@@ -18,7 +19,8 @@ class ViewPagerInViewPager2Fragment : Fragment(R.layout.viewpager_in_viewpager2)
     super.onViewCreated(view, savedInstanceState)
     binding = ViewpagerInViewpager2Binding.bind(view)
 
-    binding.viewpager.adapter = ViewPagerInViewPager2FragmentAdapter(this)
+//    binding.viewpager.adapter = ViewPagerInViewPager2FragmentAdapter(this)
+    binding.viewpager.adapter = ViewPagerInViewPager2FragmentAdapter2(this)
   }
 }
 
@@ -30,6 +32,20 @@ class ViewPagerInViewPager2FragmentAdapter(
   }
 
   override fun getCount(): Int = 3
+}
+
+class ViewPagerInViewPager2FragmentAdapter2(
+  fragment: Fragment
+) : FragmentStateAdapter(fragment) {
+  override fun getItemCount(): Int {
+    return 3
+  }
+
+  override fun createFragment(position: Int): Fragment {
+    return ViewPagerInViewPager2ChildFragment().apply {
+      count = position
+    }
+  }
 }
 
 class ViewPagerInViewPager2ChildFragment : Fragment(R.layout.viewpager_in_viewpager2_child) {
