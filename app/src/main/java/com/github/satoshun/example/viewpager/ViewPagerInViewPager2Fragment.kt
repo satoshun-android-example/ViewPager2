@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentStatePagerAdapter
+import androidx.viewpager2.widget.ViewPager2
 import com.github.satoshun.example.GroupieAdapterExample2
 import com.github.satoshun.example.R
 import com.github.satoshun.example.databinding.ViewpagerInViewpager2Binding
@@ -40,6 +41,8 @@ class ViewPagerInViewPager2ChildFragment : Fragment(R.layout.viewpager_in_viewpa
     super.onViewCreated(view, savedInstanceState)
     binding = ViewpagerInViewpager2ChildBinding.bind(view)
     binding.viewpager.adapter = GroupieAdapterExample2()
+    binding.viewpager.isUserInputEnabled = false
+    binding.viewpager.orientation = ViewPager2.ORIENTATION_HORIZONTAL
 
     binding.root.setBackgroundColor(
       when (count) {
