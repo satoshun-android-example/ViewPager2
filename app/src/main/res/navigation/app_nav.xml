@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
   android:id="@+id/app_nav"
-  app:startDestination="@id/nav_view_pager_in_view_pager2">
+  app:startDestination="@id/nav_limit">
 
   <fragment
     android:id="@+id/nav_main"
@@ -27,4 +27,8 @@
   <activity
     android:id="@+id/nav_child"
     android:name="com.github.satoshun.example.child.ChildActivity" />
+
+  <fragment
+    android:id="@+id/nav_limit"
+    android:name="com.github.satoshun.example.limit.LimitFragment" />
 </navigation>
