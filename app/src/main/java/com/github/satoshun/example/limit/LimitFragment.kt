@@ -2,6 +2,7 @@ package com.github.satoshun.example.limit
 
 import android.os.Bundle
 import android.view.View
+import androidx.core.view.isGone
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.github.satoshun.example.R
@@ -15,6 +16,8 @@ class LimitFragment : Fragment(R.layout.limit_frag) {
     binding = LimitFragBinding.bind(view)
 
     binding.viewpager.adapter = LimitFragmentAdapter(this)
+
+    requireActivity().findViewById<View>(R.id.toolbar).isGone = true
   }
 }
 

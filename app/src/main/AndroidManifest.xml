@@ -20,5 +20,9 @@
       </intent-filter>
     </activity>
     <activity android:name=".child.ChildActivity" />
+
+    <activity
+      android:name=".limit.LimitActivity"
+      android:theme="@style/AppTheme.NoActionBar" />
   </application>
 </manifest>

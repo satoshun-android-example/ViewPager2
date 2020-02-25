@@ -28,7 +28,7 @@
     android:id="@+id/nav_child"
     android:name="com.github.satoshun.example.child.ChildActivity" />
 
-  <fragment
+  <activity
     android:id="@+id/nav_limit"
-    android:name="com.github.satoshun.example.limit.LimitFragment" />
+    android:name="com.github.satoshun.example.limit.LimitActivity" />
 </navigation>
