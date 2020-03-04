@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
   android:id="@+id/app_nav"
-  app:startDestination="@id/nav_limit">
+  app:startDestination="@id/nav_material_motion">
 
   <fragment
     android:id="@+id/nav_main"
@@ -31,4 +31,8 @@
   <activity
     android:id="@+id/nav_limit"
     android:name="com.github.satoshun.example.limit.LimitActivity" />
+
+  <fragment
+    android:id="@+id/nav_material_motion"
+    android:name="com.github.satoshun.example.motion.MaterialMotionFragment" />
 </navigation>
