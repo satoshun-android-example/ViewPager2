@@ -1,11 +1,8 @@
 package com.github.satoshun.example.motion
 
-import android.graphics.Color
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import android.widget.TextView
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.github.satoshun.example.R
@@ -55,9 +52,7 @@ class Child1Fragment : Fragment(R.layout.material_motion_child_frag) {
     val binding = MaterialMotionChildFragBinding.bind(view)
 
     binding.button.text = count.toString()
-    binding.root.setBackgroundColor(
-      if (count % 2 == 0) Color.BLACK
-      else Color.YELLOW
-    )
+
+    binding.image.isVisible = count % 2 == 0
   }
 }
