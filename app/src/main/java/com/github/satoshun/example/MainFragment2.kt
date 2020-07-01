@@ -25,7 +25,6 @@ class MainFragment2 : Fragment() {
 
     val adapter = ViewPagerAdapter()
     binding.recycler.adapter = adapter
-//    binding.recycler.layoutManager = LinearLayoutManager(context)
     binding.recycler.layoutManager = GridLayoutManager(context, 1)
   }
 }
