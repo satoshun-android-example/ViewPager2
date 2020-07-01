@@ -7,9 +7,16 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.github.satoshun.example.databinding.Viewpager2FragBinding
+
+internal class FragmentStateAdapterExample(
+  fragment: Fragment
+) : FragmentStateAdapter(fragment) {
+  override fun createFragment(position: Int) = FragmentExample(position)
+
+  override fun getItemCount() = 100
+}
 
 private val colors = intArrayOf(
   Color.BLACK,
@@ -48,12 +55,4 @@ internal class FragmentExample : Fragment() {
     binding.title.text = count.toString()
     binding.root.setBackgroundColor(colors[count % colors.size])
   }
-}
-
-internal class FragmentStateAdapterExample(
-  activity: FragmentActivity
-) : FragmentStateAdapter(activity) {
-  override fun createFragment(position: Int) = FragmentExample(position)
-
-  override fun getItemCount() = 100
 }

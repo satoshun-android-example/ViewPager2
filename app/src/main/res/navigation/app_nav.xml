@@ -2,11 +2,15 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
   android:id="@+id/app_nav"
-  app:startDestination="@id/nav_material_motion">
+  app:startDestination="@id/nav_fake_drag">
 
   <fragment
     android:id="@+id/nav_main"
     android:name="com.github.satoshun.example.tablayout.TabLayoutFragment" />
+
+  <fragment
+    android:id="@+id/nav_fake_drag"
+    android:name="com.github.satoshun.example.fake.FakeDragFragment" />
 
   <fragment
     android:id="@+id/nav_main2"
