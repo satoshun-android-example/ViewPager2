@@ -6,15 +6,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
+import androidx.viewpager2.widget.ViewPager2
 import com.github.satoshun.example.FragmentStateAdapterExample
 import com.github.satoshun.example.databinding.FakeDragFragBinding
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.ensureActive
-import kotlinx.coroutines.isActive
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.*
 
 class FakeDragFragment : Fragment() {
   private lateinit var binding: FakeDragFragBinding
+
+  private var job: Job? = null
 
   override fun onCreateView(
     inflater: LayoutInflater,
@@ -31,14 +31,23 @@ class FakeDragFragment : Fragment() {
     with(binding.viewPager) {
       offscreenPageLimit = 5
       adapter = FragmentStateAdapterExample(this@FakeDragFragment)
+
+      registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+        override fun onPageSelected(position: Int) {
+          super.onPageSelected(position)
+          if (position >= 1) {
+            job?.cancel()
+          }
+        }
+      })
     }
 
-    lifecycleScope.launch {
+    job = lifecycleScope.launch {
       delay(500)
 
-      repeat(10) {
+      repeat(100) {
         binding.viewPager.beginFakeDrag()
-        (0..10).forEach {
+        repeat(10) {
           binding.viewPager.fakeDragBy(-10f)
           delay(16)
         }
@@ -46,16 +55,6 @@ class FakeDragFragment : Fragment() {
         binding.viewPager.endFakeDrag()
         delay(100)
       }
-//      delay(1000)
-//
-//      delay(1000)
-//      binding.viewPager.fakeDragBy(-100f)
-//      delay(1000)
-//      binding.viewPager.fakeDragBy(0f)
-//      delay(1000)
-////      binding.viewPager.fakeDragBy(0f)
-////      }
-//      binding.viewPager.endFakeDrag()
     }
   }
 }
