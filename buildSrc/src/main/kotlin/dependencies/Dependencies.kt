@@ -4,7 +4,7 @@ const val COMPILE_SDK = 29
 const val MIN_SDK = 25
 const val TARGET_SDK = 29
 
-private const val VKOTLIN = "1.3.71"
+private const val VKOTLIN = "1.3.72"
 private const val VNAVIGATION = "2.1.0"
 
 const val ANDROID_PLUGIN = "com.android.tools.build:gradle:4.0.0"
@@ -42,8 +42,6 @@ const val LIVEDATA = "androidx.lifecycle:lifecycle-livedata-ktx:2.1.0"
 const val LIFECYCLE_COMPILER = "androidx.lifecycle:lifecycle-compiler:2.0.0"
 const val LIFECYCLE_EXTENSIONS = "androidx.lifecycle:lifecycle-extensions:2.1.0"
 
-const val BIOMETRIC = "androidx.biometric:biometric:1.0.0-alpha03"
-
 const val EMOJI = "androidx.emoji:emoji:1.0.0"
 const val EMOJI_COMPAT = "androidx.emoji:emoji-appcompat:1.0.0"
 const val EMOJI_BUNDLED = "androidx.emoji:emoji-bundled:1.0.0"
@@ -56,10 +54,6 @@ const val VIEWPAGER2 = "androidx.viewpager2:viewpager2:1.0.0"
 const val RECOMMENDATION = "androidx.recommendation:recommendation:1.0.0"
 
 const val PREFERENCE = "androidx.preference:preference-ktx:1.1.0-alpha03"
-
-const val MULTIDEX = "androidx.multidex:multidex:2.0.0"
-
-const val RXWEBVIEW = "com.github.satoshun.RxWebView:rxwebview-kotlin:2.3.0"
 
 const val RXJAVA = "io.reactivex.rxjava2:rxjava:2.2.0"
 const val RXANDROID = "io.reactivex.rxjava2:rxandroid:2.1.0"

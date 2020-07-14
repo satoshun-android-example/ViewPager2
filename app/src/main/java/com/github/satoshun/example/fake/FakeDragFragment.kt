@@ -45,16 +45,29 @@ class FakeDragFragment : Fragment() {
     job = lifecycleScope.launch {
       delay(500)
 
-      repeat(100) {
-        binding.viewPager.beginFakeDrag()
-        repeat(10) {
-          binding.viewPager.fakeDragBy(-10f)
-          delay(16)
-        }
-        binding.viewPager.fakeDragBy(20f)
-        binding.viewPager.endFakeDrag()
-        delay(100)
+      binding.viewPager.beginFakeDrag()
+      repeat(10) {
+        binding.viewPager.fakeDragBy(-10f)
+        delay(16)
       }
+      binding.viewPager.fakeDragBy(20f)
+
+      // This line is for testing purpose
+      delay(5000)
+
+      binding.viewPager.endFakeDrag()
+      delay(100)
+    }
+
+    lifecycleScope.launch {
+      delay(1000)
+
+      // endFakeDrag before setting to currentItem
+      if (binding.viewPager.isFakeDragging) {
+        binding.viewPager.endFakeDrag()
+        job?.cancel()
+      }
+      binding.viewPager.currentItem = 3
     }
   }
 }
