@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.findViewTreeLifecycleOwner
 import androidx.lifecycle.lifecycleScope
 import androidx.viewpager2.widget.ViewPager2
 import com.github.satoshun.example.FragmentStateAdapterExample
@@ -69,5 +70,7 @@ class FakeDragFragment : Fragment() {
       }
       binding.viewPager.currentItem = 3
     }
+
+    println("Hit: ${view.findViewTreeLifecycleOwner()}")
   }
 }

@@ -7,7 +7,7 @@ const val TARGET_SDK = 29
 private const val VKOTLIN = "1.3.72"
 private const val VNAVIGATION = "2.1.0"
 
-const val ANDROID_PLUGIN = "com.android.tools.build:gradle:4.0.0"
+const val ANDROID_PLUGIN = "com.android.tools.build:gradle:4.0.1"
 const val KOTLIN_PLUGIN = "org.jetbrains.kotlin:kotlin-gradle-plugin:$VKOTLIN"
 const val SAFEARGS_PLUGIN = "androidx.navigation:navigation-safe-args-gradle-plugin:$VNAVIGATION"
 const val VERSIONS_PLUGIN = "com.github.ben-manes:gradle-versions-plugin:0.20.0"
@@ -18,10 +18,10 @@ const val COROUTINE = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$VCOUROUTIN
 const val UI_COROUTINE = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$VCOUROUTINE"
 
 const val KTX = "androidx.core:core-ktx:1.1.0"
-const val ACTIVITYX = "androidx.activity:activity-ktx:1.1.0"
-const val FRAGMENTX = "androidx.fragment:fragment-ktx:1.2.0"
+const val ACTIVITYX = "androidx.activity:activity-ktx:1.2.0-alpha06"
+const val FRAGMENTX = "androidx.fragment:fragment-ktx:1.3.0-alpha06"
 
-const val APPCOMPAT = "androidx.appcompat:appcompat:1.1.0"
+const val APPCOMPAT = "androidx.appcompat:appcompat:1.2.0-rc01"
 const val RECYCLERVIEW = "androidx.recyclerview:recyclerview:1.1.0"
 const val CONSTRAINTLAYOUT = "androidx.constraintlayout:constraintlayout:2.0.0-beta3"
 const val CARDVIEW = "androidx.cardview:cardview:1.0.0"
@@ -32,15 +32,10 @@ const val BROWSER = "androidx.browser:browser:1.0.0"
 const val NAVIGATION = "androidx.navigation:navigation-fragment-ktx:$VNAVIGATION"
 const val NAVIGATION_UI = "androidx.navigation:navigation-ui-ktx:$VNAVIGATION"
 
-private const val VROOM = "2.1.0-alpha04"
-const val ROOM_COMMON = "androidx.room:room-common:$VROOM"
-const val ROOM_RUNTIME = "androidx.room:room-runtime:$VROOM"
-const val ROOM_COMPILER = "androidx.room:room-compiler:$VROOM"
-
 const val VIEWMODEL = "androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0"
 const val LIVEDATA = "androidx.lifecycle:lifecycle-livedata-ktx:2.1.0"
+const val LIFECYCLE = "androidx.lifecycle:lifecycle-runtime-ktx:2.3.0-alpha06"
 const val LIFECYCLE_COMPILER = "androidx.lifecycle:lifecycle-compiler:2.0.0"
-const val LIFECYCLE_EXTENSIONS = "androidx.lifecycle:lifecycle-extensions:2.1.0"
 
 const val EMOJI = "androidx.emoji:emoji:1.0.0"
 const val EMOJI_COMPAT = "androidx.emoji:emoji-appcompat:1.0.0"

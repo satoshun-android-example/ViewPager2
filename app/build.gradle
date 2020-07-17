@@ -36,6 +36,8 @@ dependencies {
   implementation APPCOMPAT
   implementation CONSTRAINTLAYOUT
 
+  implementation LIFECYCLE
+
   implementation ACTIVITYX
   implementation FRAGMENTX
 
